@@ -15,6 +15,7 @@ group :development, :test do
   gem 'spring'
 end
 gem 'bootstrap-sass'
+gem 'figaro'
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'pg'
