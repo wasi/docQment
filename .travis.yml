@@ -1,0 +1,22 @@
+language: ruby
+
+rvm:
+  - "2.2.2"
+
+addons:
+  code_climate:
+    repo_token: 61a866d3c74161657a6b456fbac2185905bd412df9f262a25d22d479be7aefbd
+  postgresql: "9.3"
+
+before_script:
+  - cp config/database.yml.example config/database.yml
+  - psql -c 'create database docQment_test;' -U postgres
+
+sudo: false
+
+cache:
+  - bundler
+  - apt
+
+notifications:
+  slack: justshipit:LzdX0jeokk7Dd1Mqz4w9S4LR
